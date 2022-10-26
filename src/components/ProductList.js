@@ -48,7 +48,7 @@ export function ProductList() {
       <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" />
     </div>
     <div>
-      <div className="flex space-x-4 py-8">
+      <div className="flex space-x-4 py-8 justify-center">
         {/* Loop through tab data and render button for each. */}
         {tabsData.map((tab, idx) => {
           return (
@@ -67,7 +67,7 @@ export function ProductList() {
         })}
       </div>
       {/* Show active tab content. */}
-      <div className="py-0">
+      <div className="flex justify-center py-0">
         <p>{tabsData[activeTabIndex].content}</p>
       </div>
     </div>
