@@ -26,8 +26,6 @@ import { useState } from "react";
 import Paras from "./Paras";
 
 export function ProductList() {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
-
   return (
     <>
     {/*Header dan Navbar*/}
