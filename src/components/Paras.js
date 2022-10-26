@@ -30,7 +30,7 @@ const Paras = () => {
         <div className="text-3xl font-black">
           Shop.
         </div>
-        <div className="flex flex-row justify-between space-x-4">
+        <div className="flex flex-row justify-between space-x-8">
           <div>Home</div>
           <div>Shop</div>
           <div>Collection</div>
@@ -39,7 +39,7 @@ const Paras = () => {
           <div>About</div>
           <div>Contact</div>
         </div>
-        <div className="flex justify-end space-x-4">
+        <div className="flex justify-end space-x-8">
           <div>Search</div>
           <div>Cart</div>
           <div>Account</div>
