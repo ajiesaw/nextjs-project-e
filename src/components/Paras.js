@@ -4,16 +4,43 @@ const Paras = () => {
       <p>Paras Frontend Intern Hiring Test</p>
       <p>Please modify the /src based on the test</p>
     </div>*/
-    <nav className="flex sm:justify-center space-x-4">
-      {[
-        ['Home', '/dashboard'],
-        ['Team', '/team'],
-        ['Projects', '/projects'],
-        ['Reports', '/reports'],
-      ].map(([title, url]) => (
-      <a href={url} className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
-      ))}
-    </nav>
+    <>
+    <div className="">
+
+      {/*Header*/}
+      <div className="flex flex-row justify-between border-b-2 pb-2">
+        <div className="flex flex-row divide-x">
+          <div className="pr-4">Language</div>
+          <div className="px-4">Currency</div>
+          <div className="pl-4">Call Us (123)4567890</div>
+        </div>
+        <div className="flex justify-end">
+          <div>Free delivery every Monday and thursday.</div>
+        </div>
+      </div>
+
+      {/*Navbar*/}
+      <div className="flex flex-row justify-between border-b-2 py-4">
+        <div className="text-3xl font-black">
+          Shop.
+        </div>
+        <div className="flex flex-row justify-between">
+          <div className="pr-4">Home</div>
+          <div className="px-4">Shop</div>
+          <div className="px-4">Collection</div>
+          <div className="px-4">Pages</div>
+          <div className="px-4">Blog</div>
+          <div className="px-4">About</div>
+          <div className="pl-4">Contact</div>
+        </div>
+        <div className="flex justify-end">
+          <div className="pr-4">Search</div>
+          <div className="px-4">Cart</div>
+          <div className="pl-4">Account</div>
+        </div>
+      </div>
+    </div>
+    </>
   )
 }
 
