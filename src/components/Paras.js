@@ -6,19 +6,19 @@ const Paras = () => {
       {/*Header*/}
       <div className="flex flex-row justify-between border-b-2 pb-2">
         <div className="flex flex-row divide-x">
-          <div className="pr-4">
+          <div className="pr-2">
             <select>
               <option>English</option>
               <option>Indonesian</option>
             </select>
           </div>
-          <div className="px-4">
+          <div className="px-2">
             <select>
               <option>USD</option>
               <option>IDR</option>
             </select>
           </div>
-          <div className="pl-4">Call Us (123)4567890</div>
+          <div className="pl-2">Call Us (123)4567890</div>
         </div>
         <div className="flex justify-end">
           <div>Free delivery every Monday and thursday.</div>
@@ -30,19 +30,19 @@ const Paras = () => {
         <div className="text-3xl font-black">
           Shop.
         </div>
-        <div className="flex flex-row justify-between">
-          <div className="pr-4">Home</div>
-          <div className="px-4">Shop</div>
-          <div className="px-4">Collection</div>
-          <div className="px-4">Pages</div>
-          <div className="px-4">Blog</div>
-          <div className="px-4">About</div>
-          <div className="pl-4">Contact</div>
+        <div className="flex flex-row justify-between space-x-4">
+          <div>Home</div>
+          <div>Shop</div>
+          <div>Collection</div>
+          <div>Pages</div>
+          <div>Blog</div>
+          <div>About</div>
+          <div>Contact</div>
         </div>
-        <div className="flex justify-end">
-          <div className="pr-4">Search</div>
-          <div className="px-4">Cart</div>
-          <div className="pl-4">Account</div>
+        <div className="flex justify-end space-x-4">
+          <div>Search</div>
+          <div>Cart</div>
+          <div>Account</div>
         </div>
       </div>
     </div>
