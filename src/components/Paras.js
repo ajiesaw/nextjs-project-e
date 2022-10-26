@@ -6,8 +6,18 @@ const Paras = () => {
       {/*Header*/}
       <div className="flex flex-row justify-between border-b-2 pb-2">
         <div className="flex flex-row divide-x">
-          <div className="pr-4">Language</div>
-          <div className="px-4">Currency</div>
+          <div className="pr-4">
+            <select>
+              <option>English</option>
+              <option>Indonesian</option>
+            </select>
+          </div>
+          <div className="px-4">
+            <select>
+              <option>USD</option>
+              <option>IDR</option>
+            </select>
+          </div>
           <div className="pl-4">Call Us (123)4567890</div>
         </div>
         <div className="flex justify-end">
