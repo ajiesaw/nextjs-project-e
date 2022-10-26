@@ -48,16 +48,16 @@ export function ProductList() {
       <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" />
     </div>
     <div>
-      <div className="flex space-x-3 border-b">
+      <div className="flex space-x-4 py-8">
         {/* Loop through tab data and render button for each. */}
         {tabsData.map((tab, idx) => {
           return (
             <button
               key={idx}
-              className={`py-2 border-b-4 transition-colors duration-300 ${
+              className={`text-gray-500 hover:text-gray-900 ${
                 idx === activeTabIndex
-                  ? "border-teal-500"
-                  : "border-transparent hover:border-gray-200"
+                  ? "text-gray-900"
+                  : "text-gray-500 hover:text-gray-900"
               }`}
               // Change the active tab on click.
               onClick={() => setActiveTabIndex(idx)}>
@@ -67,7 +67,7 @@ export function ProductList() {
         })}
       </div>
       {/* Show active tab content. */}
-      <div className="py-4">
+      <div className="py-0">
         <p>{tabsData[activeTabIndex].content}</p>
       </div>
     </div>
