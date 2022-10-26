@@ -22,7 +22,6 @@ export default ProductList;*/
 
 
 
-import { useState } from "react";
 import Paras from "./Paras";
 
 export function ProductList() {
