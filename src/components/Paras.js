@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const Paras = () => {
-  const [state, setState] = useState(false);
+  const [lang, setLang] = useState(false);
+  const [cur, setCur] = useState(false);
+  const [menu, setMenu] = useState(false);
   return (
     <>
     <div className="">
@@ -9,47 +11,31 @@ const Paras = () => {
       {/*Header*/}
       <div className="flex flex-row justify-between border-b-2 pb-2">
         <div className="flex flex-row divide-x">
-          {/*<div className="pr-2">
-            <select className="appearance-none">
-              <option>English</option>
-              <option>Indonesian</option>
-            </select>
-          </div>
-          <div className="px-2">
-            <select>
-              <option>USD</option>
-              <option>IDR</option>
-            </select>
-          </div>*/}
           <div>
-            <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+          <button onClick={()=>setLang(!lang)} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Language
             </button>
-            <div class='shadow-md w-auto absolute top-12 z-10
-		          after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
-		          after:w-full after:h-full after:-z-20 after:rounded-md
-              peer-focus:top-12 peer-focus:opacity-100 peer-focus:visible 
-              transition-all duration-300 invisible opacity-0'>
-              <ul class='py-1 px-1 flex flex-col'>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>English</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Indonesian</li>
-              </ul>
-            </div>
+            {lang &&
+              <div className="absolute bg-white top-10 shadow-xl rounded-lg">
+                <ul className='py-1 px-1 flex flex-col'>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>English</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Indonesia</li>
+                </ul>
+              </div>
+              }
           </div>
           <div>
-            <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+          <button onClick={()=>setCur(!cur)} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Currency
             </button>
-            <div class='shadow-md w-auto absolute top-12 z-10
-              after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
-              after:w-full after:h-full after:-z-20 after:rounded-md
-              peer-focus:top-12 peer-focus:opacity-100 peer-focus:visible 
-              transition-all duration-300 invisible opacity-0'>
-              <ul class='py-1 px-1 flex flex-col'>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>USD</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>IDR</li>
-              </ul>
-            </div>
+            {cur &&
+              <div className="absolute bg-white left-32 top-10 shadow-xl rounded-lg">
+                <ul className='py-1 px-1 flex flex-col'>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>USD</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>IDR</li>
+                </ul>
+              </div>
+              }
           </div>
           <div className="px-2">
             Call Us (123)4567890
@@ -75,12 +61,12 @@ const Paras = () => {
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Contact</div>
         </div>
         <div className="flex justify-end space-x-4 lg:space-x-8 px-2">
-        <div className="md:hidden">
-            <button onClick={()=>setState(!state)} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+        <div className="md:hidden relative">
+            <button onClick={()=>setMenu(!menu)} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Menu
             </button>
-            {state &&
-              <div className="">
+            {menu &&
+              <div className="absolute bg-white -right-4 top-5 shadow-xl rounded-lg">
                 <ul className='py-1 px-1 flex flex-col'>
                   <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Home</li>
                   <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Shop</li>
