@@ -52,7 +52,7 @@ const Paras = () => {
             Call Us (123)4567890
           </div>
         </div>
-        <div className="flex justify-end px-2">
+        <div className="hidden md:flex md:justify-end md:px-2">
           Free delivery every Monday and thursday.
         </div>
       </div>
@@ -75,6 +75,7 @@ const Paras = () => {
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Search</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Cart</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Account</div>
+          
         </div>
       </div>
     </div>
