@@ -278,14 +278,18 @@ export function ProductList() {
       <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" />
     </div>
 
+    <div className="text-3xl font-bold py-10 text-center">
+          New Arrivals
+    </div>
+
     {/*Product List*/}
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+            <a key={product.id} href={product.href} className="group cursor-pointer">
               <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg xl:aspect-w-7 xl:aspect-h-8">
                 <img
                   src={product.image}
@@ -293,7 +297,7 @@ export function ProductList() {
                   className="h-72 w-72 object-contain object-center group-hover:opacity-75"
                 />
               </div>
-              <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
+              <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
               <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
             </a>
           ))}
