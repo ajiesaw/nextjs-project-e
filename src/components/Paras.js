@@ -22,11 +22,11 @@ const Paras = () => {
             <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Language
             </button>
-            <div class='shadow-md w-auto absolute top-5 z-10
+            <div class='shadow-md w-auto absolute top-12 z-10
 		          after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
 		          after:w-full after:h-full after:-z-20 after:rounded-md
               peer-focus:top-12 peer-focus:opacity-100 peer-focus:visible 
-              transition-all duration-300 invisible  opacity-0'>
+              transition-all duration-300 invisible opacity-0'>
               <ul class='py-1 px-1 flex flex-col'>
                 <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>English</li>
                 <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Indonesian</li>
@@ -37,11 +37,11 @@ const Paras = () => {
             <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Currency
             </button>
-            <div class='shadow-md w-auto absolute top-5 z-10
+            <div class='shadow-md w-auto absolute top-12 z-10
               after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
               after:w-full after:h-full after:-z-20 after:rounded-md
               peer-focus:top-12 peer-focus:opacity-100 peer-focus:visible 
-              transition-all duration-300 invisible  opacity-0'>
+              transition-all duration-300 invisible opacity-0'>
               <ul class='py-1 px-1 flex flex-col'>
                 <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>USD</li>
                 <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>IDR</li>
@@ -72,10 +72,29 @@ const Paras = () => {
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Contact</div>
         </div>
         <div className="flex justify-end space-x-4 lg:space-x-8 px-2">
+        <div className="md:hidden">
+            <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+              Menu
+            </button>
+            <div class='shadow-md w-auto absolute top-24 z-10
+		          after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
+		          after:w-full after:h-full after:-z-20 after:rounded-md
+              peer-focus:top-24 peer-focus:opacity-100 peer-focus:visible 
+              transition-all duration-300 invisible opacity-0'>
+              <ul class='py-1 px-1 flex flex-col'>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Home</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Shop</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Collection</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Pages</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Blog</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>About</li>
+                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Contact</li>
+              </ul>
+            </div>
+          </div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Search</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Cart</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Account</div>
-          
         </div>
       </div>
     </div>
