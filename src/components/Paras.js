@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const Paras = () => {
+  const [state, setState] = useState(false);
   return (
     <>
     <div className="">
@@ -73,24 +76,22 @@ const Paras = () => {
         </div>
         <div className="flex justify-end space-x-4 lg:space-x-8 px-2">
         <div className="md:hidden">
-            <button class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+            <button onClick={()=>setState(!state)} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Menu
             </button>
-            <div class='shadow-md w-auto absolute top-24 z-10
-		          after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white
-		          after:w-full after:h-full after:-z-20 after:rounded-md
-              peer-focus:top-24 peer-focus:opacity-100 peer-focus:visible 
-              transition-all duration-300 invisible opacity-0'>
-              <ul class='py-1 px-1 flex flex-col'>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Home</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Shop</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Collection</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Pages</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Blog</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>About</li>
-                <li class='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Contact</li>
-              </ul>
-            </div>
+            {state &&
+              <div className="">
+                <ul className='py-1 px-1 flex flex-col'>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Home</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Shop</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Collection</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Pages</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Blog</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>About</li>
+                  <li className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Contact</li>
+                </ul>
+              </div>
+              }
           </div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Search</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Cart</div>
