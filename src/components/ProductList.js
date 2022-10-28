@@ -285,7 +285,7 @@ const ProductList = () => {
 
     {/* Gambar */}
     <div>
-      <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" />
+      <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" alt="Cart" />
     </div>
 
     <div className="text-3xl font-bold py-10 text-center">
@@ -293,7 +293,7 @@ const ProductList = () => {
     </div>
 
     {/* Tab */}
-    <div className="flex flex-row justify-center space-x-8">
+    <div className="flex flex-row justify-center space-x-4 md:space-x-8">
       {
         tabsData.map((tab) => (
           <div
