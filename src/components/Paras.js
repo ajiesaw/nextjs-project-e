@@ -12,7 +12,7 @@ const Paras = () => {
       <div className="flex flex-row justify-between border-b-2 pb-2">
         <div className="flex flex-row divide-x">
           <div>
-          <button onClick={()=>{setLang(!lang); setCur(false); setMenu(false)}} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+            <button onClick={()=>{setLang(!lang); setCur(false); setMenu(false)}} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Language
             </button>
             {lang &&
@@ -25,7 +25,7 @@ const Paras = () => {
             }
           </div>
           <div>
-          <button onClick={()=>{setCur(!cur); setLang(false); setMenu(false)}} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
+            <button onClick={()=>{setCur(!cur); setLang(false); setMenu(false)}} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
               Currency
             </button>
             {cur &&
