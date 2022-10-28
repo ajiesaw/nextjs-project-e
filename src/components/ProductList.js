@@ -23,6 +23,7 @@ export default ProductList;*/
 
 
 import Paras from "./Paras";
+import { useState } from "react";
 
 const products = [
   {
@@ -267,13 +268,22 @@ const products = [
   }
 ]
 
-export function ProductList() {
+const ProductList = () => {
+  const tabsData =  ['All Products', "Men's Clothing", "Jewelery", "Electronics", "Women's Clothing"]
+  const [tabs, setTabs] = useState(tabsData[0]);
+  const menCloth = products.filter(product =>
+    product.category === "men's clothing"
+  );
+
+
+    console.log(tabs)
+
   return (
     <>
-    {/*Header dan Navbar*/}
+    {/* Header dan Navbar */}
     <Paras />
 
-    {/*Gambar*/}
+    {/* Gambar */}
     <div>
       <img class="object-cover w-full h-96" src="https://akcdn.detik.net.id/community/media/visual/2021/12/25/shopee-1_169.png?w=700&q=90" />
     </div>
@@ -282,7 +292,45 @@ export function ProductList() {
           New Arrivals
     </div>
 
-    {/*Product List*/}
+    {/* Tab */}
+    <div className="flex flex-row justify-center space-x-8">
+      {
+        tabsData.map((tab) => (
+          <div
+            className="cursor-pointer text-gray-900 peer focus:text-gray-500 hover:text-gray-500"
+            onClick={()=>{
+              setTabs(tab)
+            }}>
+              {tab}
+          </div>
+        ))
+      }
+    </div>
+    <div>
+        <div className="bg-white">
+          <div className="mx-auto max-w-2xl py-16 lg:max-w-7xl px-4">
+            <h2 className="sr-only">Products</h2>
+
+            <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+              {products.map((product) => (
+                <a key={product.id} href={product.href} className="group">
+                  <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-white xl:aspect-w-7 xl:aspect-h-8">
+                    <img
+                      src={product.image}
+                      alt={product.imageAlt}
+                      className="h-72 w-72 object-contain object-center group-hover:opacity-75"
+                    />
+                  </div>
+                  <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
+                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+    </div>
+
+    {/* Product List */}
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-16 lg:max-w-7xl px-4">
         <h2 className="sr-only">Products</h2>
