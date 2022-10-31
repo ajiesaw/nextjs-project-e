@@ -29,7 +29,7 @@ import products from "../dummy/products.json"
 const ProductList = () => {
   const tabsData =  ['All Products', "Men's Clothing", "Jewelery", "Electronics", "Women's Clothing"]
   const [tabs, setTabs] = useState(tabsData[0]);
-  
+
   return (
     <>
     {/* Header dan Navbar */}
@@ -44,7 +44,7 @@ const ProductList = () => {
           New Arrivals
     </div>
 
-    {/* Tabs and Product List */}
+    {/* Tabs */}
     <div className="flex flex-row justify-center space-x-4 md:space-x-8">
       {
         tabsData.map((tab) => (
@@ -58,6 +58,8 @@ const ProductList = () => {
         ))
       }
     </div>
+
+    {/* Product List */}
     <div>
         <div className="bg-white">
           <div className="mx-auto max-w-2xl py-16 lg:max-w-7xl px-4">
@@ -79,9 +81,7 @@ const ProductList = () => {
                 </a>
               ) : null
               ))}
-            </div>
 
-            <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {products.map((product) => (
                 tabs === "Men's Clothing" && product.category === "men's clothing" ? (
                 <a key={product.id} href={product.href} className="group">
@@ -95,11 +95,9 @@ const ProductList = () => {
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
                   <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
                 </a>
-              ) : null
+                ) : null
               ))}
-            </div>
 
-            <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {products.map((product) => (
                 tabs === "Jewelery" && product.category === "jewelery" ? (
                 <a key={product.id} href={product.href} className="group">
@@ -115,9 +113,7 @@ const ProductList = () => {
                 </a>
               ) : null
               ))}
-            </div>
 
-            <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {products.map((product) => (
                 tabs === "Electronics" && product.category === "electronics" ? (
                 <a key={product.id} href={product.href} className="group">
@@ -133,9 +129,7 @@ const ProductList = () => {
                 </a>
               ) : null
               ))}
-            </div>
 
-            <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {products.map((product) => (
                 tabs === "Women's Clothing" && product.category === "women's clothing" ? (
                 <a key={product.id} href={product.href} className="group">
