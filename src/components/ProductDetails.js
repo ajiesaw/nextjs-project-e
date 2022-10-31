@@ -53,7 +53,7 @@ const ProductDetails = () => {
 
       {/* Deskripsi */}
       <div>
-        <div className="border-b-2 py-2">
+        <div className="">
           <div className="text-2xl font-medium py-2">
             {product.title}
           </div>
@@ -70,6 +70,18 @@ const ProductDetails = () => {
             <p>
               {product.description}
             </p>
+          </div>
+
+          <div className="border-b-2 py-2"></div>
+
+          <div className="grid grid-cols-2 pt-4">
+            <div>
+              <p className="py-2">Color</p>
+              <div className="w-5 h-5 bg-gray-500 rounded-full"></div>
+            </div>
+            <div>
+              <p className="py-2">Size</p>
+            </div>
           </div>
         </div>
       </div>
