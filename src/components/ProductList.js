@@ -49,7 +49,7 @@ const ProductList = () => {
       {
         tabsData.map((tab) => (
           <div
-            className="cursor-pointer text-gray-900 peer focus:text-gray-500 hover:text-gray-500"
+            className="text-center cursor-pointer text-gray-900 peer focus:text-gray-500 hover:text-gray-500"
             onClick={()=>{
               setTabs(tab)
             }}>
