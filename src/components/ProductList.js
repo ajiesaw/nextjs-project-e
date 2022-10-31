@@ -69,7 +69,7 @@ const ProductList = () => {
             <div className="grid gap-y-10 gap-x-6 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {products.map((product) => (
                 tabs === "All Products" ? (
-                <Link key={product.id} to={'/products/1'} className="group">
+                <Link key={product.id} to={"products/1"} className="group">
                   <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-white xl:aspect-w-7 xl:aspect-h-8">
                     <img
                       src={product.image}
@@ -78,7 +78,7 @@ const ProductList = () => {
                     />
                   </div>
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 </Link>
               ) : null
               ))}
@@ -94,7 +94,7 @@ const ProductList = () => {
                     />
                   </div>
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 </a>
                 ) : null
               ))}
@@ -110,7 +110,7 @@ const ProductList = () => {
                     />
                   </div>
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 </a>
               ) : null
               ))}
@@ -126,7 +126,7 @@ const ProductList = () => {
                     />
                   </div>
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 </a>
               ) : null
               ))}
@@ -142,7 +142,7 @@ const ProductList = () => {
                     />
                   </div>
                   <h3 className="truncate mt-4 text-sm text-gray-700">{product.title}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 </a>
               ) : null
               ))}
