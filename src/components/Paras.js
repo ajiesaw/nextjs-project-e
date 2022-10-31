@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Paras = () => {
   const [lang, setLang] = useState(false);
@@ -49,10 +50,16 @@ const Paras = () => {
       {/*Navbar*/}
       <div className="flex flex-row justify-between border-b-2 py-4">
         <div className="cursor-pointer text-3xl font-black px-2">
-          Shop.
+          <Link to="/">
+            Shop.
+          </Link>
         </div>
         <div className="hidden md:flex md:space-x-4 lg:flex-row lg:justify-center lg:space-x-8">
-          <div className="cursor-pointer text-gray-900 hover:text-gray-500">Home</div>
+          <div className="cursor-pointer text-gray-900 hover:text-gray-500">
+            <Link to="/">
+              Home
+            </Link>
+          </div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Shop</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Collection</div>
           <div className="cursor-pointer text-gray-900 hover:text-gray-500">Pages</div>
