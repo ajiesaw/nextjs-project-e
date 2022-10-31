@@ -29,13 +29,7 @@ import products from "../dummy/products.json"
 const ProductList = () => {
   const tabsData =  ['All Products', "Men's Clothing", "Jewelery", "Electronics", "Women's Clothing"]
   const [tabs, setTabs] = useState(tabsData[0]);
-  const menCloth = products.filter(product =>
-    product.category === "men's clothing"
-  );
-
-
-    console.log(tabs)
-
+  
   return (
     <>
     {/* Header dan Navbar */}
