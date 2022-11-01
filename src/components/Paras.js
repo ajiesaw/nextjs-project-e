@@ -70,15 +70,15 @@ const Paras = () => {
         <div className="flex justify-end space-x-4 lg:space-x-8 px-2">
         <div className="md:hidden relative">
             <button onClick={()=>{setMenu(!menu); setLang(false); setCur(false)}} class="px-2 text-gray-900 peer focus:text-gray-500 hover:text-gray-500 transition-all duration-200">
-              <Link to="/">
-                Home
-              </Link>
+              Menu
             </button>
             {menu &&
               <div className="absolute bg-white -right-6 top-5 shadow-xl rounded-lg">
                 <ul className='py-3 px-3 flex flex-col'>
                   <li onClick={()=>setMenu(false)} className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>
-                    Home
+                    <Link to="/">
+                      Home
+                    </Link>
                   </li>
                   <li onClick={()=>setMenu(false)} className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Shop</li>
                   <li onClick={()=>setMenu(false)} className='cursor-pointer p-1 rounded-md text-gray-900 hover:text-gray-500 text-center'>Collection</li>
