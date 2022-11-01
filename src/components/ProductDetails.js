@@ -77,7 +77,13 @@ const ProductDetails = () => {
           <div className="grid grid-cols-2 pt-4">
             <div>
               <p className="py-2">Color</p>
-              <div className="w-5 h-5 bg-gray-500 rounded-full"></div>
+                <div className="flex space-x-3">
+                  <button className="w-7 h-7 bg-blue-900 rounded-full ring-gray-400 hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1"></button>
+                  <button className="w-7 h-7 bg-red-900 rounded-full ring-gray-400 hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1"></button>
+                  <button className="w-7 h-7 bg-green-900 rounded-full ring-gray-400 hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1"></button>
+                  <button className="w-7 h-7 bg-yellow-900 rounded-full ring-gray-400 hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1"></button>
+                  <button className="w-7 h-7 bg-purple-900 rounded-full ring-gray-400 hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1"></button>
+                </div>
             </div>
             <div>
               <p className="py-2">Size</p>
