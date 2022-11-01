@@ -49,13 +49,13 @@ const ProductList = () => {
     <div className="flex flex-row justify-center space-x-4 md:space-x-8">
       {
         tabsData.map((tab) => (
-          <div
+          <button
             className="text-center cursor-pointer text-gray-900 peer focus:text-gray-500 hover:text-gray-500"
             onClick={()=>{
               setTabs(tab)
             }}>
               {tab}
-          </div>
+          </button>
         ))
       }
     </div>
