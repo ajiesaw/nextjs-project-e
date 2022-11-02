@@ -51,9 +51,11 @@ const ProductDetails = () => {
         />
       </div>
 
-      {/* Deskripsi */}
+      {/* Nama, Harga, Review, Deskripsi */}
       <div>
         <div className="">
+
+          
           <div className="text-2xl font-medium py-2">
             {product.title}
           </div>
@@ -87,6 +89,13 @@ const ProductDetails = () => {
             </div>
             <div>
               <p className="py-2">Size</p>
+                <div className="flex space-x-3">
+                  <button className="w-7 h-7 bg-gray-100 rounded-md ring-gray-400 text-sm hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1">5L</button>
+                  <button className="w-7 h-7 bg-gray-100 rounded-md ring-gray-400 text-sm hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1">8L</button>
+                  <button className="w-7 h-7 bg-gray-100 rounded-md ring-gray-400 text-sm hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1">10L</button>
+                  <button className="w-7 h-7 bg-gray-100 rounded-md ring-gray-400 text-sm hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1">13L</button>
+                  <button className="w-7 h-7 bg-gray-100 rounded-md ring-gray-400 text-sm hover:ring-2 hover:ring-offset-1 focus:ring-2 focus:ring-offset-1">15L</button>
+                </div>
             </div>
           </div>
         </div>
